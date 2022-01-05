@@ -1,0 +1,696 @@
+/**
+ * If using a CSS pre-processor, tell it to overwrite this file. If not, place
+ * your custom CSS modifications here.
+ */
+/*body {
+    max-width: 1066px;
+    overflow-x: hidden;
+    margin: 0 auto;
+    position: relative;
+}*/
+
+.navbar {
+  background-color: white;
+}
+
+.navbar-header {
+  width: 100%;
+}
+
+.region-navigation {
+  display: flex;
+  height: 80%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.region-doormat {
+  display: flex;
+  justify-content: space-around;
+  background-color: lightgray;
+  height: 400px;
+  margin: 0 -9999;
+  align-content: space-between;
+}
+
+.view-doormat .view-content {
+  /*display: grid;
+    grid-template-columns: repeat(2, 1fr);*/
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  row-gap: 15px;
+  max-height: 250px;
+  column-gap: 50px;
+  margin: 0;
+  padding: 0;
+  margin-top: 1.5rem;
+}
+
+.views-element-container h2 {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.contextual-region h2 {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.views-row a {
+  color: black;
+  text-decoration: underline;
+}
+
+.footer {
+  width: 100%;
+  padding: 0;
+}
+
+.logo img {
+  width: 70px;
+}
+
+.field--type-image {
+  border-radius: 10px;
+}
+
+.ingredients-container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  margin-left: 10px;
+  margin-top: 150px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 10px;
+  width: 45%;
+  padding: 25px;
+  position: relative;
+  z-index: 1;
+}
+
+.ingredients-container h2 {
+  align-self: center;
+  font-size: 20px;
+  color: #0b6b33;
+  font-weight: bold;
+}
+
+/*.field--name-field-media-image {
+    border-radius: 10px;
+    position: absolute;
+    top: -50;
+    right: 0;
+}
+
+.field--name-field-media-image img {
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 10px;
+}*/
+
+.view-recipes .view-content,
+.view-products .view-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.paragraph--type--ingredients {
+  display: flex;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid gray;
+}
+
+.field--name-field-recipe-image img {
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.field--name-field-display-title h2 a {
+  color: #0b6b33;
+  font-weight: bolder;
+  max-width: 470px;
+}
+
+.recipe-image {
+  position: absolute;
+  top: 0;
+  right: -100px;
+  border-radius: 10px;
+}
+
+.recipe-image img {
+  position: relative;
+  border-radius: 50px 0 0 50px;
+  z-index: -1;
+}
+
+.field--name-field-persons {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.field--name-field-requirements .field--items {
+  display: flex;
+}
+
+.field--name-field-requirements .field--item {
+  font-weight: bold;
+  margin-right: 5px;
+  padding: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+}
+
+.js-quickedit-page-title {
+  display: none;
+}
+
+.recipe-info {
+  display: flex;
+  gap: 10px;
+  width: 35%;
+}
+
+.field--name-field-preparation {
+  display: flex;
+  margin-top: 100px;
+  flex-direction: column;
+  height: fit-content;
+}
+
+.field--name-field-preparation-step {
+  display: flex;
+  gap: 50px;
+  margin-right: 200px;
+}
+
+.paragraph--type--preparation {
+  display: flex;
+  height: fit-content;
+  margin-top: 15px;
+}
+
+.field--name-field-time {
+  min-width: 50px;
+  margin-right: 100px;
+  margin-left: 60px;
+}
+
+.breadcrumb {
+  background-color: white;
+}
+
+.personsButton {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  background-color: #3cb21e;
+  color: white;
+  font-size: 30px;
+  padding: 2px;
+  border-radius: 50%;
+  margin-left: 20px;
+  margin-right: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.personsButton:hover {
+  cursor: pointer;
+}
+
+.view-recipes span {
+  display: none;
+}
+
+.field--name-field-display-title {
+  padding: 5px 0;
+}
+
+.field--name-field-recipe-image {
+  display: flex;
+}
+
+.field--name-field-preparation
+  .field--items
+  .field--item:nth-child(1)
+  .steps::after {
+  content: "1";
+  display: block;
+}
+
+.field--name-field-preparation .field--item:nth-child(2) .steps::after {
+  content: "2";
+  display: block;
+}
+
+.field--name-field-preparation
+  .field--items
+  .field--item:nth-child(3)
+  .steps::after {
+  content: "3";
+  display: block;
+}
+
+.field--name-field-preparation
+  .field--items
+  .field--item:nth-child(4)
+  .steps::after {
+  content: "4";
+  display: block;
+}
+
+.field--name-field-preparation
+  .field--items
+  .field--item:nth-child(5)
+  .steps::after {
+  content: "5";
+  display: block;
+}
+
+.field--name-field-preparation
+  .field--items
+  .field--item:nth-child(6)
+  .steps::after {
+  content: "6";
+  display: block;
+}
+
+.field--name-field-preparation
+  .field--items
+  .field--item:nth-child(7)
+  .steps::after {
+  content: "7";
+  display: block;
+}
+
+.field--name-field-preparation
+  .field--items
+  .field--item:nth-child(8)
+  .steps::after {
+  content: "8";
+  display: block;
+}
+
+.field--name-field-preparation
+  .field--items
+  .field--item:nth-child(9)
+  .steps::after {
+  content: "9";
+  display: block;
+}
+
+.field--name-field-preparation
+  .field--items
+  .field--item:nth-child(10)
+  .steps::after {
+  content: "10";
+  display: block;
+}
+
+.field--name-field-preparation
+  .field--items
+  .field--item:nth-child(11)
+  .steps::after {
+  content: "11";
+  display: block;
+}
+
+.field--name-field-preparation
+  .field--items
+  .field--item:nth-child(12)
+  .steps::after {
+  content: "12";
+  display: block;
+}
+
+.field--name-field-preparation
+  .field--items
+  .field--item:nth-child(13)
+  .steps::after {
+  content: "13";
+  display: block;
+}
+
+.field--name-field-preparation
+  .field--items
+  .field--item:nth-child(14)
+  .steps::after {
+  content: "14";
+  display: block;
+}
+
+.field--name-field-preparation
+  .field--items
+  .field--item:nth-child(15)
+  .steps::after {
+  content: "15";
+  display: block;
+}
+
+.steps {
+  display: flex;
+  column-gap: 5px;
+  font-weight: bold;
+}
+
+.field--name-field-preparation .field--label {
+  font-size: 20px;
+  color: #0b6b33;
+  font-weight: bold;
+}
+
+.field--name-field-ingredients .field--item .paragraph--type--ingredients {
+  column-gap: 5px;
+}
+
+.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.field--name-field-block-title {
+  font-size: 25px;
+  color: #0b6b33;
+  font-weight: bolder;
+}
+
+.paragraph--type--two-columns {
+  display: flex;
+  margin-top: 40px;
+  margin-bottom: 150px;
+}
+
+.field--name-field-block-description {
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.menu--start-with {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.menu--start-with li {
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.menu--start-with li a {
+  color: black;
+  font-weight: bold;
+}
+
+.menu--start-with li:hover {
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.input-group .form-search {
+  border-radius: 50px;
+}
+
+.field--name-field-right .home-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 800px;
+}
+
+.field--name-field-right img {
+  position: relative;
+  border-radius: 50px 0 0 50px;
+  height: 80%;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+}
+
+.field--name-field-left img {
+  border-radius: 0 50px 50px 0;
+  margin-right: 50px;
+}
+
+.field--name-field-overview-title {
+  font-size: 25px;
+  color: #0b6b33;
+  font-weight: bolder;
+}
+
+.home-products .view-content {
+  max-height: 300px;
+}
+
+.home-products .view-content .views-row {
+  border-top: 1px solid lightgray;
+  padding-top: 5px;
+  width: 90%;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.home-products .view-content .views-row a {
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-products .view-content .views-row a::after {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  font-family: "Font Awesome 5 Free";
+  content: "\f061";
+  color: #b7b7b7;
+  font-weight: 900;
+  height: 20px;
+}
+
+.home-products .view-content .views-row:nth-child(1) {
+  border: none;
+}
+
+.home-products .view-content .views-row:nth-child(8) {
+  border: none;
+}
+
+.home-products .viewsreference--view-title {
+  display: none;
+}
+
+.paragraph--type--block {
+  width: 330px;
+}
+
+.input-group {
+  width: 400px;
+}
+
+.input-group-btn button {
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 50px;
+}
+
+.input-group-btn .icon {
+  color: #0b6b33;
+}
+
+.input-group-btn button:hover {
+  background-color: white;
+  border: 1px solid white;
+}
+
+.field--name-field-recipes-title {
+  font-size: 25px;
+  color: #0b6b33;
+  font-weight: bolder;
+}
+
+.view-title {
+  width: 300px;
+}
+
+.fa-clock::before {
+  line-height: 26px;
+}
+
+.region-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  padding: 20px;
+}
+
+.menu--footer {
+  display: flex;
+}
+
+.menu--sitemap li a {
+  padding: 5px 0;
+  color: black;
+  text-decoration: underline;
+}
+
+.menu--sitemap li a:hover {
+  padding: 5px 0;
+  color: black;
+  text-decoration: underline;
+  background-color: #d3d3d3;
+}
+
+.field--name-field-view-description {
+  max-width: 300px;
+}
+
+.paragraph--type--two-columns .field--name-field-left .field--name-field-advertisment-image img {
+  border-radius: 10px;
+  margin: 0;
+  width: 100%;
+  height: 350px;
+  position: absolute;
+  z-index: -1;
+  margin-bottom: 200px;
+}
+
+.paragraph--type--two-columns
+.paragraph--type--advertisment {
+    margin-bottom: 0;
+}
+
+.paragraph--type--two-columns
+.paragraph--type--advertisment
+.advertisment-text {
+  background-color: white;
+  width: 50%;
+  border-radius: 10px;
+  padding: 30px;
+  position: relative;
+  top: 70px;
+  left: 40px;
+}
+
+.advertisment-text .field--name-field-advertisment-title {
+  font-size: 20px;
+  color: #0b6b33;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+
+.advertisment-text .field--name-field-advertisment-description {
+  margin-bottom: 20px;
+}
+
+.advertisment-text .field--name-field-advertisment-link {
+  background-color: #3cb21e;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 50px;
+}
+
+.advertisment-text .field--name-field-advertisment-link a {
+  color: white;
+  font-weight: bold;
+}
+
+.advertisment-text .field--name-field-advertisment-link a::after {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  font-family: "Font Awesome 5 Free";
+  content: "\f105";
+  margin-left: 10px;
+}
+
+.advertisment-text .field--name-field-advertisment-link a:hover {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.paragraph--type--webform {
+  background-color: #0b6b33;
+  border-radius: 10px;
+  height: 350px;
+  margin-left: 20px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.paragraph--type--webform .field--name-field-title {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  max-width: 250px;
+}
+
+.paragraph--type--webform .field--name-field-description {
+  color: white;
+  margin: 20px 0;
+}
+
+.form-item-mailadress input {
+  border-radius: 50px;
+  background-color: #247a48;
+  border: none;
+  position: absolute;
+}
+
+.paragraph--type--webform .form-group .form-submit {
+  visibility: hidden;
+}
+
+.paragraph--type--webform .form-group .form-submit::after {
+  content: "\f1d8";
+  position: relative;
+  visibility: visible;
+  font-style: normal;
+  font-variant: normal;
+  font-family: "Font Awesome 5 Free";
+  color: white;
+  background-color: #3cb21e;
+  padding: 9px;
+  border-radius: 50%;
+  left: 155px;
+}
+
+.paragraph--type--advertisment img {
+    width: 100%;
+    border-radius: 10px;
+    z-index: -1;
+    position: absolute;
+}
+
+.paragraph--type--advertisment {
+    margin-bottom: 400px;
+}
+
+.paragraph--type--advertisment
+.advertisment-text {
+  background-color: white;
+  width: 50%;
+  border-radius: 10px;
+  padding: 30px;
+  position: relative;
+  top: 70px;
+  left: 40px;
+}
